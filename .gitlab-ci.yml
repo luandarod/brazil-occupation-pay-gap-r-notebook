@@ -1,0 +1,17 @@
+image: rocker/r-ver:4.6.1
+
+stages:
+  - validate
+
+validate-project:
+  stage: validate
+  script:
+    - Rscript requirements.R
+    - Rscript R/run_analysis.R
+    - Rscript R/validate_outputs.R
+  artifacts:
+    when: always
+    paths:
+      - data/processed/
+      - figures/
+    expire_in: 1 week

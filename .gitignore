@@ -1,0 +1,23 @@
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+*.Rproj
+
+# Raw PNAD microdata/cache can be hundreds of MB or more.
+data/raw/
+cache/
+pnadc-cache/
+*.zip
+PNADC_*.txt
+input_PNADC_*.txt
+input_PNADC_*.sas
+deflator_PNADC_*.xls
+dicionario_PNADC_*.xls
+Estrutura_Ocupacao_COD.xls
+
+# Local/temporary notebook artifacts.
+.ipynb_checkpoints/
+*.tmp

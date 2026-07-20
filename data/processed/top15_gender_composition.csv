@@ -1,0 +1,31 @@
+occupation,occupation_label,sex,workers,cell_sample_n,share
+0411,0411 - Oficiais de polícia militar,Homem,29497.44739685,81,0.9179466958383263
+0411,0411 - Oficiais de polícia militar,Mulher,2636.71412972,10,0.08205330416167367
+1120,1120 - Diretores gerais e gerentes gerais,Homem,76585.75558086,151,0.6943562166336154
+1120,1120 - Diretores gerais e gerentes gerais,Mulher,33711.74553775,68,0.30564378336638465
+1211,1211 - Dirigentes financeiros,Homem,65452.37929707,116,0.5048935850349845
+1211,1211 - Dirigentes financeiros,Mulher,64183.60982435,130,0.49510641496501545
+1221,1221 - Dirigentes de vendas e comercialização,Homem,264933.22524689,446,0.6519947527995034
+1221,1221 - Dirigentes de vendas e comercialização,Mulher,141409.34746452,246,0.3480052472004966
+1323,1323 - Dirigentes de empresas de construção,Homem,51985.37208996,111,0.8613466976143284
+1323,1323 - Dirigentes de empresas de construção,Mulher,8368.22563549,22,0.13865330238567158
+1330,1330 - Dirigentes de serviços de tecnologia da informação e comunicações,Homem,129211.96858206,188,0.7927442063384643
+1330,1330 - Dirigentes de serviços de tecnologia da informação e comunicações,Mulher,33781.29904315,62,0.20725579366153576
+1346,"1346 - Gerentes de sucursais de bancos, de serviços financeiros e de seguros",Homem,136865.79642656,234,0.5250541711122841
+1346,"1346 - Gerentes de sucursais de bancos, de serviços financeiros e de seguros",Mulher,123804.06195514,223,0.4749458288877158
+1349,1349 - Dirigentes e gerentes de serviços profissionais não classificados anteriormente,Homem,40397.7700196,88,0.743736827160406
+1349,1349 - Dirigentes e gerentes de serviços profissionais não classificados anteriormente,Mulher,13919.52145276,39,0.2562631728395941
+2144,2144 - Engenheiros mecânicos,Homem,98739.86107371,162,0.8424022718290912
+2144,2144 - Engenheiros mecânicos,Mulher,18472.38345089,30,0.15759772817090875
+2151,2151 - Engenheiros eletricistas,Homem,76554.21967456,153,0.8779326458599841
+2151,2151 - Engenheiros eletricistas,Mulher,10644.06374224,19,0.12206735414001589
+2211,2211 - Médicos gerais,Homem,113314.01047268,239,0.46079895351248273
+2211,2211 - Médicos gerais,Mulher,132593.68877215,305,0.5392010464875172
+2212,2212 - Médicos especialistas,Homem,227507.88360416,459,0.5558183425373768
+2212,2212 - Médicos especialistas,Mulher,181812.69146999,378,0.4441816574626231
+2310,2310 - Professores de universidades e do ensino superior,Homem,178122.37577295,418,0.5483796196250144
+2310,2310 - Professores de universidades e do ensino superior,Mulher,146693.44414164,380,0.45162038037498575
+2619,2619 - Profissionais em direito não classificados anteriormente,Homem,73001.35631908,185,0.43538894292014846
+2619,2619 - Profissionais em direito não classificados anteriormente,Mulher,94667.93686384,262,0.5646110570798515
+3355,3355 - Inspetores de polícia e detetives,Homem,58019.24167552,129,0.78145993968644345
+3355,3355 - Inspetores de polícia e detetives,Mulher,16225.436431459999,47,0.21854006031355652

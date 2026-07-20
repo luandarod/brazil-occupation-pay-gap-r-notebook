@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-07-20 16:02:45 -03",
+  "r_version": "4.6.1",
+  "pnad_year": 2026,
+  "pnad_quarter": 1,
+  "rows_imported": 511149,
+  "rows_analytic": 223762,
+  "occupations_total": 430,
+  "occupations_after_filter": 266,
+  "min_sample": 80,
+  "min_cell_sample": 40,
+  "cache_dir": "C:/Users/Luanda Rodrigues/AppData/Local/pnadc-cache/occupation-pay-gap",
+  "top_occupation": {
+    "code": "1120",
+    "label": "1120 - Diretores gerais e gerentes gerais",
+    "avg_income": 22415.827,
+    "median_income": 11000,
+    "sample_n": 219
+  },
+  "top5": [
+    {
+      "rank": 1,
+      "occupation_label": "1120 - Diretores gerais e gerentes gerais",
+      "avg_income": 22415.827,
+      "median_income": 11000,
+      "sample_n": 219
+    },
+    {
+      "rank": 2,
+      "occupation_label": "2212 - Médicos especialistas",
+      "avg_income": 19292.8106,
+      "median_income": 15000,
+      "sample_n": 837
+    },
+    {
+      "rank": 3,
+      "occupation_label": "3355 - Inspetores de polícia e detetives",
+      "avg_income": 14251.6026,
+      "median_income": 11000,
+      "sample_n": 176
+    },
+    {
+      "rank": 4,
+      "occupation_label": "0411 - Oficiais de polícia militar",
+      "avg_income": 13924.207,
+      "median_income": 12300,
+      "sample_n": 91
+    },
+    {
+      "rank": 5,
+      "occupation_label": "2619 - Profissionais em direito não classificados anteriormente",
+      "avg_income": 13703.8837,
+      "median_income": 12000,
+      "sample_n": 447
+    }
+  ],
+  "bottom5_after_filter": [
+    {
+      "rank": 262,
+      "occupation_label": "9215 - Trabalhadores florestais elementares",
+      "avg_income": 1233.5362,
+      "median_income": 1000,
+      "sample_n": 536
+    },
+    {
+      "rank": 263,
+      "occupation_label": "7533 - Costureiros, bordadeiros e afins",
+      "avg_income": 1212.1838,
+      "median_income": 800,
+      "sample_n": 334
+    },
+    {
+      "rank": 264,
+      "occupation_label": "7318 - Artesãos de tecidos, couros e materiais semelhantes",
+      "avg_income": 1205.943,
+      "median_income": 1000,
+      "sample_n": 495
+    },
+    {
+      "rank": 265,
+      "occupation_label": "7514 - Trabalhadores da conservação de frutas, legumes e similares",
+      "avg_income": 1135.2376,
+      "median_income": 600,
+      "sample_n": 102
+    },
+    {
+      "rank": 266,
+      "occupation_label": "6225 - Pescadores",
+      "avg_income": 1063.9633,
+      "median_income": 720,
+      "sample_n": 1002
+    }
+  ],
+  "largest_women_vs_men_gaps_top15": [
+    {
+      "occupation_label": "1120 - Diretores gerais e gerentes gerais",
+      "avg_income_Homem": 26712.1017,
+      "avg_income_Mulher": 12655.6249,
+      "gap_women_vs_men": -0.5262
+    },
+    {
+      "occupation_label": "1211 - Dirigentes financeiros",
+      "avg_income_Homem": 17344.9391,
+      "avg_income_Mulher": 9969.6066,
+      "gap_women_vs_men": -0.4252
+    },
+    {
+      "occupation_label": "1221 - Dirigentes de vendas e comercialização",
+      "avg_income_Homem": 13489.5641,
+      "avg_income_Mulher": 9456.0389,
+      "gap_women_vs_men": -0.299
+    }
+  ]
+}
