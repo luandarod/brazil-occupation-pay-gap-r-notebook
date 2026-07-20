@@ -1,45 +1,44 @@
 # Brazil Occupation Pay Anatomy
 
-On 20 July 2026, Folha de S.Paulo published a story about the highest-paid occupations in Brazil. A ranking is a good hook, but it is not the full story.
+On 20 July 2026, Folha de S.Paulo published a story about the highest-paid occupations in Brazil. I used it as a starting point for a question that a plain ranking cannot answer well:
 
-This project uses PNAD Continua/IBGE microdata from Q1 2026 to ask a deeper question: **when an occupation looks high-paid, what exactly is inside that number?**
+**When an occupation looks high-paid, what is hiding inside that number?**
 
-The analysis separates four layers:
+The project uses PNAD Continua/IBGE microdata from Q1 2026 and keeps the survey design intact. That means weights, strata and PSU are part of the pipeline. The result is not a CSV sorted by salary. It is a small wage-anatomy project in R.
 
-- the headline ranking by survey-weighted mean income;
-- the internal wage distribution by occupation: P10, median, P90, Gini and top-10% income share;
-- representation and access patterns by sex and race/color;
-- a Theil decomposition to estimate how much observed earnings inequality sits between occupations versus inside occupations.
+The first surprise came fast. `Diretores gerais e gerentes gerais` lead the ranking by mean income, around **R$ 22.4k** per month. Their weighted median is **R$ 11k**. That is a very different story from `Medicos especialistas`, with a mean around **R$ 19.3k** and a median around **R$ 15k**.
 
-The core finding is sharper than a top-20 list: **occupation explains a large part of inequality, but most of the measured inequality still happens within occupations.** In this run, the Theil decomposition attributes about **42.6%** of earnings inequality to differences between occupations and **57.4%** to differences inside occupations.
+Same ranking neighborhood. Different wage structure.
 
-That changes the storytelling. It is not only "which jobs pay more?". It is also "which occupations have a high middle, which ones are pulled up by a small top tail, and who is under-represented in those better-paid spaces?"
+The deeper result is the Theil decomposition. In this run, differences **between occupations** account for about **42.6%** of observed earnings inequality. The other **57.4%** sits **inside occupations**. So occupation matters a lot, but the occupation label still hides a big part of the wage spread.
 
 ## What This Repo Does
 
-The analysis is written in R and uses `PNADcIBGE`, `survey`, `srvyr` and `tidyverse`. It downloads the PNAD quarter, maps occupation codes to names, applies the survey design and exports only aggregate tables and figures.
+The analysis is written in R with `PNADcIBGE`, `survey`, `srvyr`, `tidyverse` and `ggplot2`.
 
-No raw PNAD microdata are stored here. Social-post drafts stay outside the repo.
+It downloads the PNAD quarter, maps IBGE occupation codes, applies the complex survey design and exports aggregate tables and figures. Raw PNAD microdata stay out of the repo. LinkedIn drafts stay out too.
 
 ## Main Outputs
 
-- `data/processed/occupation_rank_q1_2026.csv`: occupation ranking with weighted mean, confidence interval, weighted median and sample count.
-- `data/processed/occupation_wage_anatomy.csv`: distributional anatomy by occupation, including P10/P50/P90, Gini, top-tail share and wage archetype.
-- `data/processed/occupation_access_anatomy.csv`: pay premium, female representation quotient, race/color representation quotient and access profile.
+- `data/processed/occupation_rank_q1_2026.csv`: weighted ranking by occupation, with mean, confidence interval, median and sample count.
+- `data/processed/occupation_wage_anatomy.csv`: P10, P50, P90, Gini, top-10% income share, mean/median ratio and wage archetype.
+- `data/processed/occupation_access_anatomy.csv`: income premium, female representation quotient, race/color representation quotient and access profile.
 - `data/processed/top15_gender_composition.csv`: gender composition inside the 15 highest-mean-income occupations.
 - `data/processed/top15_gender_gap.csv`: descriptive gender gaps for occupation-sex cells with enough observations.
-- `data/processed/descriptive_model_terms.csv`: interpretable terms from the descriptive models.
+- `data/processed/descriptive_model_terms.csv`: model terms from the descriptive log-income checks.
 - `data/processed/inequality_decomposition_theil.json`: Theil T decomposition by occupation, state and education.
-- `data/processed/deep_anatomy_highlights.json`: selected high-signal findings for review and narrative writing.
-- `figures/top20_occupations_income.png`: ranking chart with confidence intervals.
-- `figures/top15_gender_composition.png`: composition chart for top occupations.
-- `figures/wage_anatomy_map.png`: map of median income versus mean/median distortion.
-- `figures/distribution_ladder_selected_occupations.png`: P10-P90 ladders for selected occupations.
-- `figures/access_vs_internal_gender_gap.png`: female participation versus within-occupation gender gap.
-- `figures/access_representation_quadrants.png`: representation map using location quotients.
-- `figures/theil_inequality_decomposition.png`: between/within decomposition chart.
+- `data/processed/deep_anatomy_highlights.json`: selected findings used to review the story.
 
-For the short version of the findings, read `docs/insights.md`.
+The figures are in `figures/`:
+
+- `top20_occupations_income.png`
+- `wage_anatomy_map.png`
+- `distribution_ladder_selected_occupations.png`
+- `access_vs_internal_gender_gap.png`
+- `access_representation_quadrants.png`
+- `theil_inequality_decomposition.png`
+
+For the short reading of the findings, open `docs/insights.md`.
 
 ## Project Structure
 
@@ -88,7 +87,7 @@ If R is installed but not in `PATH`, use the full Windows path:
 & "C:\Program Files\R\R-4.6.1\bin\Rscript.exe" R/validate_outputs.R
 ```
 
-The script keeps raw PNAD/cache files outside the repo by default:
+Raw PNAD/cache files are stored outside the repo by default:
 
 ```text
 %LOCALAPPDATA%\pnadc-cache\occupation-pay-gap
@@ -109,11 +108,13 @@ $env:PNADC_CACHE_DIR = "D:\pnadc-cache"
 - IBGE COD occupation structure.
 - Occupational segregation and wage-gap literature cited in `docs/literature-review.md`.
 
-## Read This Before Interpreting The Results
+## Read Before Interpreting
 
 This is descriptive work. It does not prove discrimination, and it does not estimate the causal effect of gender, race/color, education or occupation.
 
-The project compares observed survey-weighted patterns. Pay differences can reflect hours, formalization, region, education, selection into employment, seniority, firm type, sector and variables PNAD does not observe. The notebook says that out loud because the easy version of this analysis would overclaim.
+PNAD does not observe the same employer, exact role, seniority, bonus structure, firm size or productivity. Pay differences can also reflect hours, formalization, region, education and selection into employment.
+
+The useful claim is narrower: a public ranking becomes much richer when we inspect distribution, uncertainty, representation and between/within inequality.
 
 ## License
 
