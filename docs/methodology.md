@@ -6,7 +6,7 @@ This project starts with a simple news hook: a wage ranking by occupation. The t
 
 The working question is:
 
-> Which occupations have the highest usual monthly income from the main job in Brazil, and how does the story change when we look at uncertainty, medians, gender composition and observable worker characteristics?
+> Which occupations have the highest usual monthly income from the main job in Brazil, and how does the story change when we inspect the distribution, representation patterns and inequality decomposition behind the ranking?
 
 That wording matters. The project does not try to estimate causal effects. It reads the PNAD as a complex survey and produces descriptive estimates.
 
@@ -44,6 +44,65 @@ The analytic domain keeps people with positive usual monthly income and a valid 
 Detailed occupation codes get noisy fast. The ranking keeps occupations with at least **80** unweighted observations. The gender-gap table uses a stricter cell rule: each occupation-sex cell must have at least **40** observations.
 
 Mean income is the main ranking metric because it matches the public conversation around average pay. The project also reports weighted medians because the mean can be dragged upward by a small high-income group. That difference is one of the more useful parts of the analysis.
+
+The deeper anatomy keeps occupations with at least **120** unweighted observations. Some access/gap plots use **180** observations to reduce instability in small occupations.
+
+## Wage Anatomy
+
+`R/run_deep_anatomy.R` adds a distributional layer to the project. For each occupation, it estimates:
+
+- P10, P25, P50, P75 and P90 of usual monthly income;
+- weighted median hourly income;
+- within-occupation Gini;
+- top-10% income share inside the occupation;
+- mean/median ratio;
+- P90/P50 and P50/P10 ratios;
+- female and preta/parda/indigena representation shares;
+- descriptive within-occupation gender gap.
+
+The script then labels each occupation with a wage archetype:
+
+- `elite_estavel`: high median and a relatively compressed mean/median ratio;
+- `elite_de_cauda_longa`: high mean with a large upper-tail pull;
+- `teto_alto_base_distante`: large distance between the middle and the upper tail;
+- `renda_baixa_comprimida`: low median and compressed distribution;
+- `topo_instavel_amostra_pequena`: high uncertainty around the mean;
+- `meio_heterogeneo`: mixed profiles that do not fit the sharper categories.
+
+These labels are heuristics for storytelling and exploration. They are not official occupational categories.
+
+## Access Anatomy
+
+The access layer uses location quotients:
+
+- female location quotient = occupation female share / overall female share;
+- race/color location quotient = occupation preta/parda/indigena share / overall preta/parda/indigena share.
+
+A value above 1 means over-representation relative to the analytic sample. A value below 1 means under-representation.
+
+The access profile is designed to make the ranking less superficial. A high-income occupation can be:
+
+- high-income with narrow access;
+- high-income with broader access;
+- low-income with vulnerable concentration;
+- female-present with an internal pay gap;
+- mixed.
+
+Again, this is descriptive. It should be read as evidence for better questions, not as a causal diagnosis.
+
+## Inequality Decomposition
+
+The project uses a weighted Theil T index because it can be decomposed into between-group and within-group components.
+
+For a grouping variable such as occupation, the method estimates:
+
+- total observed earnings inequality;
+- the share explained by differences between group means;
+- the share left inside the groups.
+
+In the current output, occupation accounts for about **42.6%** of Theil inequality, while **57.4%** remains within occupations. Education accounts for about **27.3%** between groups, and state accounts for about **5.3%**.
+
+This is one of the strongest interpretations in the project: occupational sorting matters a lot, but it does not erase internal dispersion.
 
 ## Models
 

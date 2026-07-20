@@ -3,11 +3,21 @@ image: rocker/r-ver:4.6.1
 stages:
   - validate
 
+variables:
+  PNADC_CACHE_DIR: "$CI_PROJECT_DIR/.pnadc-cache"
+
+cache:
+  key: pnadc-q1-2026
+  paths:
+    - .pnadc-cache/
+
 validate-project:
   stage: validate
   script:
     - Rscript requirements.R
     - Rscript R/run_analysis.R
+    - Rscript R/run_deep_anatomy.R
+    - Rscript R/render_deep_figures.R
     - Rscript R/validate_outputs.R
   artifacts:
     when: always

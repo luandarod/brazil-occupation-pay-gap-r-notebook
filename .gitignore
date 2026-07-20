@@ -10,6 +10,7 @@ renv/staging/
 data/raw/
 cache/
 pnadc-cache/
+.pnadc-cache/
 *.zip
 PNADC_*.txt
 input_PNADC_*.txt

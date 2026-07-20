@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-07-20 17:31:49 -03",
+  "interpretation": "Theil T decomposes earnings inequality into between-group and within-group components. It is descriptive and survey-weighted with PNAD expansion weights.",
+  "occupation": {
+    "group_variable": "occupation",
+    "total_theil": 0.4835,
+    "between_group_theil": 0.2058,
+    "within_group_theil": 0.2777,
+    "between_share": 0.4256,
+    "within_share": 0.5744
+  },
+  "state": {
+    "group_variable": "state",
+    "total_theil": 0.4835,
+    "between_group_theil": 0.0256,
+    "within_group_theil": 0.4579,
+    "between_share": 0.0529,
+    "within_share": 0.9471
+  },
+  "education": {
+    "group_variable": "education",
+    "total_theil": 0.4835,
+    "between_group_theil": 0.1319,
+    "within_group_theil": 0.3516,
+    "between_share": 0.2729,
+    "within_share": 0.7271
+  }
+}

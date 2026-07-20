@@ -1,54 +1,80 @@
 # Findings Worth Reading Twice
 
-The headline ranking is only the front door. Once the PNAD microdata are weighted and the occupation labels are joined back in, a few less obvious patterns show up.
+The headline ranking is only the front door. Once the PNAD microdata are weighted and the occupation labels are joined back in, the better story is not "who earns more?". It is "what kind of wage structure sits behind each occupation?".
 
-## 1. The top occupation is not the most "typical" high-income occupation
+## 1. Occupation matters a lot, but it is not the whole inequality story
+
+The Theil decomposition gives the project a stronger spine.
+
+In this run, differences **between occupations** account for about **42.6%** of observed earnings inequality. Differences **inside occupations** account for about **57.4%**.
+
+That is a useful result because it avoids two weak readings:
+
+- "Everything is just occupation choice."
+- "Occupation does not explain much."
+
+The data say something more interesting. Occupational sorting matters, but the occupation label still hides a lot of dispersion.
+
+## 2. Some high-paid occupations have a high middle. Others have a high tail.
 
 `Diretores gerais e gerentes gerais` rank first by average income, at about **R$ 22.4k** per month. The weighted median is **R$ 11k**.
 
-That gap is the clue. A mean twice the median usually means the upper tail is doing a lot of work. Some directors earn very high amounts, and the average moves with them. For a worker asking "what does someone in this occupation usually earn?", the median tells a colder story.
+That is not a small detail. The mean is about **2.04 times** the median, and the within-occupation Gini is about **0.55**. This is a high-income occupation, but it is also a long-tail occupation.
 
-`Medicos especialistas` look steadier. They rank second by mean income, around **R$ 19.3k**, but their weighted median is **R$ 15k**. Lower mean, higher middle. That is a more compressed distribution near the top.
+`Medicos especialistas` tell a different story. The mean is about **R$ 19.3k**, the median is **R$ 15k**, and the mean/median ratio is much lower. It is still unequal inside, but the middle of the distribution is stronger.
 
-## 2. Legal occupations have a long upper tail
+Same top-of-ranking neighborhood. Different anatomy.
 
-Several law-related occupations sit high in the ranking, but the mean-median gap is large.
+## 3. "Elite" is not one category
 
-Among the top 50 occupations, `Profissionais de nivel medio do direito e servicos legais e afins` have one of the highest mean-to-median ratios: about **2.05**. `Advogados e juristas` are also pulled upward, with a mean around **R$ 9.3k** and a median around **R$ 5k**.
+The script classifies occupations into wage archetypes. The result is not meant to be official; it is meant to make the reading sharper.
 
-The project should not read that as a problem by itself. It reads as heterogeneity. Legal work likely mixes public jobs, private practice, seniority, geography and very different kinds of contracts under labels that look tidy on a chart.
+Among occupations with enough observations:
 
-## 3. Some high-ranking occupations are statistically noisier than they look
+- **18** look like `elite_de_cauda_longa`: high mean pulled strongly by the upper tail.
+- **13** look like `elite_estavel`: high median with a more stable distribution.
+- **24** have `teto_alto_base_distante`: a large jump from the middle to the upper tail.
+- **48** show `renda_baixa_comprimida`: lower and more compressed distributions.
 
-The confidence interval for `Diretores gerais e gerentes gerais` is wide: roughly **R$ 15.7k to R$ 29.1k** for the mean. That is not a small footnote. It means the exact top rank is less stable than the point estimate makes it feel.
+This is the kind of segmentation a plain ranking cannot show.
 
-The same caution applies to small, specialized groups near the top. A clean sorted bar chart can hide how much uncertainty is behind each dot.
+## 4. The strongest "long-tail" cases are not only glamorous jobs
 
-## 4. Representation and pay do not move together neatly
+The highest mean/median ratios include law-related occupations, top management and also low-income work.
 
-In the top 15 occupations, women are estimated to be a majority in some groups. Two examples:
+Examples:
 
-- `Profissionais em direito nao classificados anteriormente`: about **56% women**
-- `Medicos gerais`: about **54% women**
+- `Profissionais de nivel medio do direito e servicos legais e afins`: mean/median about **2.05**.
+- `Diretores gerais e gerentes gerais`: mean/median about **2.04**.
+- `Advogados e juristas`: mean around **R$ 9.3k**, median around **R$ 5k**.
+- `Classificadores de residuos`: mean/median about **1.86**, but around a much lower income level.
 
-But women being present in a high-income occupation does not mean the income gap disappears. Among `Medicos especialistas`, women are about **44%** of workers in the composition table, yet their estimated mean income is about **27% lower** than men's within that occupation group.
+That last case matters. A long tail is not always a story of wealth. Sometimes it is a sign that a low-paid occupation mixes very different work arrangements under one label.
 
-That is one of the stronger portfolio angles: access to the occupation and pay inside the occupation are related questions, but not the same question.
+## 5. Access and pay are different questions
 
-## 5. The "manager/director" label hides different stories
+The access map uses location quotients. A value below 1 means the group is under-represented in that occupation relative to the analytic sample.
 
-Management roles dominate the top of the ranking, but they are not one pattern.
+Some high-median occupations show narrow access:
 
-`Diretores gerais e gerentes gerais` have a very high mean, wide uncertainty and a large gender gap. `Dirigentes financeiros` have a lower mean than the top directors but a sharper gender gap among the reliable cells. `Dirigentes de vendas e comercializacao` sit lower in the top group, with a different composition again.
+- `Diretores gerais e gerentes gerais`: median **R$ 11k**, female representation quotient **0.71**, preta/parda/indigena representation quotient **0.37**.
+- `Dirigentes de servicos de tecnologia da informacao e comunicacoes`: median **R$ 10k**, female quotient **0.48**, race/color quotient **0.38**.
+- `Engenheiros mecanicos`: median **R$ 10k**, female quotient **0.37**, race/color quotient **0.44**.
 
-So the better question is not "are managers paid more?" The better question is which kind of management role, with which composition, and how stable the estimate is.
+This does not prove exclusion mechanisms. It does show where a portfolio analyst should look next.
 
-## 6. The model says occupation matters, but it does not erase everything
+## 6. Presence does not guarantee parity inside the occupation
 
-The descriptive model without occupation fixed effects estimates lower income associated with being a woman, being in the preta/parda/indigena group, and being in an informal/autonomous proxy category. When a weighted sensitivity model adds occupation fixed effects, those associations shrink but do not vanish.
+Women are present in some high-income occupations, but the internal gaps can remain large.
 
-This is not causal evidence. It is a useful warning for interpretation: part of the gap is connected to who is sorted into which occupations, and part remains visible even after comparing workers within detailed occupation groups.
+Examples from the deeper output:
+
+- `Medicos especialistas`: women are about **44%** of workers, with mean income about **27% lower** than men's.
+- `Dirigentes financeiros`: women are close to half of workers, with mean income about **43% lower** than men's.
+- `Diretores gerais e gerentes gerais`: women are about **31%** of workers, with mean income about **53% lower** than men's.
+
+These are descriptive gaps, not proof of equal-work pay differences. PNAD does not observe same company, exact seniority, bonus structure or contract detail. But the pattern is too important to ignore.
 
 ## Best one-sentence takeaway
 
-Brazil's wage ranking is less a ladder and more a map of uneven distributions. Some occupations are high because the middle is high. Others are high because the top tail pulls the average upward.
+Brazil's wage ranking is less a ladder and more a set of hidden wage architectures: some occupations pay well because the middle is high, some because the top tail pulls the average upward, and much of inequality remains inside the occupation label itself.

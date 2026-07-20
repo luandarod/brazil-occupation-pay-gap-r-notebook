@@ -1,0 +1,369 @@
+{
+  "generated_at": "2026-07-20 17:31:52 -03",
+  "rows": 223762,
+  "occupations_after_filter": 223,
+  "archetypes": [
+    {
+      "wage_anatomy_type": "meio_heterogeneo",
+      "n": 110
+    },
+    {
+      "wage_anatomy_type": "renda_baixa_comprimida",
+      "n": 48
+    },
+    {
+      "wage_anatomy_type": "teto_alto_base_distante",
+      "n": 24
+    },
+    {
+      "wage_anatomy_type": "elite_de_cauda_longa",
+      "n": 18
+    },
+    {
+      "wage_anatomy_type": "elite_estavel",
+      "n": 13
+    },
+    {
+      "wage_anatomy_type": "topo_instavel_amostra_pequena",
+      "n": 10
+    }
+  ],
+  "most_tail_led": [
+    {
+      "occupation_label": "3411 - Profissionais de nível médio do direito e serviços legais e afins",
+      "mean_income": 7190.5498,
+      "p50": 3500,
+      "mean_median_ratio": 2.0544,
+      "gini_within": 0.5437,
+      "sample_n": 907
+    },
+    {
+      "occupation_label": "1120 - Diretores gerais e gerentes gerais",
+      "mean_income": 22415.827,
+      "p50": 11000,
+      "mean_median_ratio": 2.0378,
+      "gini_within": 0.5486,
+      "sample_n": 219
+    },
+    {
+      "occupation_label": "2611 - Advogados e juristas",
+      "mean_income": 9325.2511,
+      "p50": 5000,
+      "mean_median_ratio": 1.8651,
+      "gini_within": 0.4893,
+      "sample_n": 2171
+    },
+    {
+      "occupation_label": "9612 - Classificadores de resíduos",
+      "mean_income": 1670.4789,
+      "p50": 900,
+      "mean_median_ratio": 1.8561,
+      "gini_within": 0.6035,
+      "sample_n": 646
+    },
+    {
+      "occupation_label": "2359 - Profissionais de ensino não classificados anteriormente",
+      "mean_income": 2699.9577,
+      "p50": 1500,
+      "mean_median_ratio": 1.8,
+      "gini_within": 0.5599,
+      "sample_n": 467
+    },
+    {
+      "occupation_label": "2421 - Analistas de gestão e administração",
+      "mean_income": 8764.2782,
+      "p50": 5000,
+      "mean_median_ratio": 1.7529,
+      "gini_within": 0.4617,
+      "sample_n": 918
+    },
+    {
+      "occupation_label": "3422 - Treinadores, instrutores e árbitros de atividades esportivas",
+      "mean_income": 3811.7014,
+      "p50": 2200,
+      "mean_median_ratio": 1.7326,
+      "gini_within": 0.5137,
+      "sample_n": 120
+    },
+    {
+      "occupation_label": "1211 - Dirigentes financeiros",
+      "mean_income": 13693.3647,
+      "p50": 8000,
+      "mean_median_ratio": 1.7117,
+      "gini_within": 0.4746,
+      "sample_n": 246
+    }
+  ],
+  "most_stable_elite": [
+    {
+      "occupation_label": "2619 - Profissionais em direito não classificados anteriormente",
+      "mean_income": 13703.8837,
+      "p50": 12000,
+      "p90_p50_ratio": 2.0833,
+      "gini_within": 0.3815,
+      "sample_n": 447
+    },
+    {
+      "occupation_label": "2211 - Médicos gerais",
+      "mean_income": 12550.5408,
+      "p50": 12000,
+      "p90_p50_ratio": 1.6667,
+      "gini_within": 0.3456,
+      "sample_n": 544
+    },
+    {
+      "occupation_label": "2310 - Professores de universidades e do ensino superior",
+      "mean_income": 12046.9592,
+      "p50": 12000,
+      "p90_p50_ratio": 1.75,
+      "gini_within": 0.3241,
+      "sample_n": 798
+    },
+    {
+      "occupation_label": "0110 - Oficiais das forças armadas",
+      "mean_income": 10723.1023,
+      "p50": 10000,
+      "p90_p50_ratio": 2,
+      "gini_within": 0.309,
+      "sample_n": 149
+    },
+    {
+      "occupation_label": "0412 - Graduados e praças da polícia militar",
+      "mean_income": 7322.9798,
+      "p50": 6779,
+      "p90_p50_ratio": 1.6227,
+      "gini_within": 0.2324,
+      "sample_n": 812
+    },
+    {
+      "occupation_label": "0512 - Graduados e praças do corpo de bombeiros",
+      "mean_income": 7802.8364,
+      "p50": 6500,
+      "p90_p50_ratio": 1.8462,
+      "gini_within": 0.2517,
+      "sample_n": 145
+    },
+    {
+      "occupation_label": "5413 - Guardiões de presídios",
+      "mean_income": 7260.5193,
+      "p50": 6400,
+      "p90_p50_ratio": 1.875,
+      "gini_within": 0.2564,
+      "sample_n": 244
+    },
+    {
+      "occupation_label": "2514 - Programadores de aplicações",
+      "mean_income": 7204.1669,
+      "p50": 6000,
+      "p90_p50_ratio": 2,
+      "gini_within": 0.3263,
+      "sample_n": 121
+    }
+  ],
+  "access_gap_cases": [
+    {
+      "occupation_label": "7533 - Costureiros, bordadeiros e afins",
+      "share_Mulher": 0.94,
+      "mean_Mulher": 1106.7346,
+      "mean_Homem": 2865.1278,
+      "gender_gap_women_vs_men": -0.6137,
+      "p50": 800,
+      "sample_n": 334
+    },
+    {
+      "occupation_label": "2359 - Profissionais de ensino não classificados anteriormente",
+      "share_Mulher": 0.7498,
+      "mean_Mulher": 1995.4227,
+      "mean_Homem": 4811.7951,
+      "gender_gap_women_vs_men": -0.5853,
+      "p50": 1500,
+      "sample_n": 467
+    },
+    {
+      "occupation_label": "5249 - Vendedores não classificados anteriormente",
+      "share_Mulher": 0.5278,
+      "mean_Mulher": 1825.3446,
+      "mean_Homem": 4271.2442,
+      "gender_gap_women_vs_men": -0.5726,
+      "p50": 2000,
+      "sample_n": 1367
+    },
+    {
+      "occupation_label": "7531 - Alfaiates, modistas, chapeleiros e peleteiros",
+      "share_Mulher": 0.9012,
+      "mean_Mulher": 1621.0268,
+      "mean_Homem": 3565.2073,
+      "gender_gap_women_vs_men": -0.5453,
+      "p50": 1518,
+      "sample_n": 984
+    },
+    {
+      "occupation_label": "5243 - Vendedores a domicilio",
+      "share_Mulher": 0.5224,
+      "mean_Mulher": 1749.3803,
+      "mean_Homem": 3715.6348,
+      "gender_gap_women_vs_men": -0.5292,
+      "p50": 2000,
+      "sample_n": 2499
+    },
+    {
+      "occupation_label": "5142 - Especialistas em tratamento de beleza e afins",
+      "share_Mulher": 0.9373,
+      "mean_Mulher": 2064.219,
+      "mean_Homem": 3937.4402,
+      "gender_gap_women_vs_men": -0.4757,
+      "p50": 1621,
+      "sample_n": 2823
+    },
+    {
+      "occupation_label": "7317 - Artesãos de pedra, madeira, vime e materiais semelhantes",
+      "share_Mulher": 0.4346,
+      "mean_Mulher": 1156.5007,
+      "mean_Homem": 2057.125,
+      "gender_gap_women_vs_men": -0.4378,
+      "p50": 1500,
+      "sample_n": 188
+    },
+    {
+      "occupation_label": "1211 - Dirigentes financeiros",
+      "share_Mulher": 0.4951,
+      "mean_Mulher": 9969.6066,
+      "mean_Homem": 17344.9391,
+      "gender_gap_women_vs_men": -0.4252,
+      "p50": 8000,
+      "sample_n": 246
+    }
+  ],
+  "access_profiles": [
+    {
+      "access_profile": "perfil_misto",
+      "n": 143
+    },
+    {
+      "access_profile": "alta_renda_acesso_mais_amplo",
+      "n": 33
+    },
+    {
+      "access_profile": "presenca_feminina_com_gap_interno",
+      "n": 25
+    },
+    {
+      "access_profile": "alta_renda_porta_estreita",
+      "n": 16
+    },
+    {
+      "access_profile": "baixa_renda_concentracao_vulneravel",
+      "n": 6
+    }
+  ],
+  "narrow_high_income_access": [
+    {
+      "occupation_label": "1120 - Diretores gerais e gerentes gerais",
+      "p50": 11000,
+      "p50_premium_vs_overall": 4,
+      "women_location_quotient": 0.7083,
+      "race_location_quotient": 0.3674,
+      "share_Mulher": 0.3056,
+      "share_pretapardaindigena": 0.2046,
+      "sample_n": 219
+    },
+    {
+      "occupation_label": "1330 - Dirigentes de serviços de tecnologia da informação e comunicações",
+      "p50": 10000,
+      "p50_premium_vs_overall": 3.5455,
+      "women_location_quotient": 0.4803,
+      "race_location_quotient": 0.3836,
+      "share_Mulher": 0.2073,
+      "share_pretapardaindigena": 0.2136,
+      "sample_n": 250
+    },
+    {
+      "occupation_label": "1323 - Dirigentes de empresas de construção",
+      "p50": 10000,
+      "p50_premium_vs_overall": 3.5455,
+      "women_location_quotient": 0.3213,
+      "race_location_quotient": 0.5532,
+      "share_Mulher": 0.1387,
+      "share_pretapardaindigena": 0.308,
+      "sample_n": 133
+    },
+    {
+      "occupation_label": "2144 - Engenheiros mecânicos",
+      "p50": 10000,
+      "p50_premium_vs_overall": 3.5455,
+      "women_location_quotient": 0.3652,
+      "race_location_quotient": 0.4369,
+      "share_Mulher": 0.1576,
+      "share_pretapardaindigena": 0.2432,
+      "sample_n": 192
+    },
+    {
+      "occupation_label": "0110 - Oficiais das forças armadas",
+      "p50": 10000,
+      "p50_premium_vs_overall": 3.5455,
+      "women_location_quotient": 0.4883,
+      "race_location_quotient": 0.7322,
+      "share_Mulher": 0.2107,
+      "share_pretapardaindigena": 0.4077,
+      "sample_n": 149
+    },
+    {
+      "occupation_label": "2151 - Engenheiros eletricistas",
+      "p50": 9000,
+      "p50_premium_vs_overall": 3.0909,
+      "women_location_quotient": 0.2829,
+      "race_location_quotient": 0.4948,
+      "share_Mulher": 0.1221,
+      "share_pretapardaindigena": 0.2755,
+      "sample_n": 172
+    },
+    {
+      "occupation_label": "2511 - Analistas de sistemas",
+      "p50": 7500,
+      "p50_premium_vs_overall": 2.4091,
+      "women_location_quotient": 0.5243,
+      "race_location_quotient": 0.6254,
+      "share_Mulher": 0.2262,
+      "share_pretapardaindigena": 0.3482,
+      "sample_n": 695
+    },
+    {
+      "occupation_label": "1324 - Dirigentes de empresas de abastecimento, distribuição e afins",
+      "p50": 7000,
+      "p50_premium_vs_overall": 2.1818,
+      "women_location_quotient": 0.4872,
+      "race_location_quotient": 0.6297,
+      "share_Mulher": 0.2103,
+      "share_pretapardaindigena": 0.3506,
+      "sample_n": 186
+    }
+  ],
+  "inequality_decomposition": {
+    "generated_at": "2026-07-20 17:31:49 -03",
+    "interpretation": "Theil T decomposes earnings inequality into between-group and within-group components. It is descriptive and survey-weighted with PNAD expansion weights.",
+    "occupation": {
+      "group_variable": "occupation",
+      "total_theil": 0.4835,
+      "between_group_theil": 0.2058,
+      "within_group_theil": 0.2777,
+      "between_share": 0.4256,
+      "within_share": 0.5744
+    },
+    "state": {
+      "group_variable": "state",
+      "total_theil": 0.4835,
+      "between_group_theil": 0.0256,
+      "within_group_theil": 0.4579,
+      "between_share": 0.0529,
+      "within_share": 0.9471
+    },
+    "education": {
+      "group_variable": "education",
+      "total_theil": 0.4835,
+      "between_group_theil": 0.1319,
+      "within_group_theil": 0.3516,
+      "between_share": 0.2729,
+      "within_share": 0.7271
+    }
+  }
+}
